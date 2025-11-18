@@ -7,7 +7,6 @@ class Ucenik:
         self.razred = razred
         self.ocjene = [] 
 
-
     def dodaj_ocjenu(self, ocjena):
         if isinstance(ocjena, int) and 1 <= ocjena <= 5:
             self.ocjene.append(ocjena)
@@ -15,13 +14,11 @@ class Ucenik:
         else:
             print(f"GREŠKA: Ocjena '{ocjena}' nije važeća. Molimo unesite broj od 1 do 5.")
 
-
     def izracunaj_prosjek(self):
         if not self.ocjene:
             return 0.0
         
         return sum(self.ocjene) / len(self.ocjene)
-
 
     def info(self):
         print("-" * 30)
@@ -37,7 +34,6 @@ class Ucenik:
         print(f"Prosjek ocjena: {prosjek:.2f}") 
         print("-" * 30)
 
-
 def ispisi_izbornik():
     print ("-"*50)
     print ("Glavni izbornik")
@@ -48,20 +44,15 @@ def ispisi_izbornik():
     print ("3. Ispis podataka o učenici")
     print ("-"*50)
 
-
 def upisUcenice(ime, prezime, razred):
     ucenik = Ucenik(ime, prezime, razred)
     return ucenik
 
-
 def upisOcjene(ucenik, ocjena):
     ucenik.dodaj_ocjenu(ocjena)
 
-
 def ispisPodataka(ucenik):
     ucenik.info()
-
-
 
 lista_ucenika = []
 provjera = False
@@ -104,3 +95,4 @@ while True:
             print ("Greška")
     except ValueError:
         print ("Molimo unesite ispravan odabir (0/1/2/3).")
+
